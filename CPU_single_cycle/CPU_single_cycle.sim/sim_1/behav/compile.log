@@ -1,6 +1,38 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/RegFile/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/mux4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/mux2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/Ins_Memory/Ins_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ins_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/Data_Memory/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/ALU/ALU32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU32
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/Extend.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Extend
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/Extend_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Extend_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_single_cycle
+INFO: [VRFC 10-2458] undeclared symbol PCwre, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:16]
+INFO: [VRFC 10-2458] undeclared symbol Ins_Data, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:25]
+INFO: [VRFC 10-2458] undeclared symbol RegDst, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:48]
+INFO: [VRFC 10-2458] undeclared symbol RegWre, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:60]
+INFO: [VRFC 10-2458] undeclared symbol Extsel, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:78]
+INFO: [VRFC 10-2458] undeclared symbol Ext_Imm_number, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:80]
+INFO: [VRFC 10-2458] undeclared symbol ALUSrcA, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:88]
+INFO: [VRFC 10-2458] undeclared symbol ALUSrcB, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:95]
+INFO: [VRFC 10-2458] undeclared symbol ALUopcode, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:106]
+INFO: [VRFC 10-2458] undeclared symbol RD, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:120]
+INFO: [VRFC 10-2458] undeclared symbol WR, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:121]
+INFO: [VRFC 10-2458] undeclared symbol DBDataSrc, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:128]
+INFO: [VRFC 10-2458] undeclared symbol PCSrc, assumed default net type wire [D:/code/CPU_single_cycle/src/top.v:143]
+ERROR: [VRFC 10-433] cannot index into non-array Ins_Data [D:/code/CPU_single_cycle/src/top.v:36]
+ERROR: [VRFC 10-433] cannot index into non-array Ins_Data [D:/code/CPU_single_cycle/src/top.v:37]
+ERROR: [VRFC 10-433] cannot index into non-array Ins_Data [D:/code/CPU_single_cycle/src/top.v:38]
+ERROR: [VRFC 10-433] cannot index into non-array Ins_Data [D:/code/CPU_single_cycle/src/top.v:39]
+ERROR: [VRFC 10-433] cannot index into non-array Ins_Data [D:/code/CPU_single_cycle/src/top.v:40]
+ERROR: [VRFC 10-433] cannot index into non-array Ins_Data [D:/code/CPU_single_cycle/src/top.v:41]
+ERROR: [VRFC 10-1040] module CPU_single_cycle ignored due to previous errors [D:/code/CPU_single_cycle/src/top.v:4]

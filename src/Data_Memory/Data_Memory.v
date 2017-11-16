@@ -22,12 +22,12 @@ module Data_Memory(
     assign Dataout[23:16] = (nRD==0)?ram[DAddr + 1]:8'bz;
     assign Dataout[31:24] = (nRD==0)?ram[DAddr]:8'bz;
 
-    always@( negedge clk ) begin
+    always@( negedge CLK ) begin
         if( nWR==0 ) begin
-            ram[DAddr] <= writeData[31:24];
-            ram[DAddr+1] <= writeData[23:16];
-            ram[DAddr+2] <= writeData[15:8];
-            ram[DAddr+3] <= writeData[7:0];
+            ram[DAddr] <= DataIn[31:24];
+            ram[DAddr+1] <= DataIn[23:16];
+            ram[DAddr+2] <= DataIn[15:8];
+            ram[DAddr+3] <= DataIn[7:0];
         end
     end
 endmodule
