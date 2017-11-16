@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  "../../../../src/RegFile.v"
-verilog xil_defaultlib  "../../../../src/RegFile_tb.v"
+verilog xil_defaultlib  "../../../../src/Extend.v"
+verilog xil_defaultlib  "../../../../src/Extend_tb.v"
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
