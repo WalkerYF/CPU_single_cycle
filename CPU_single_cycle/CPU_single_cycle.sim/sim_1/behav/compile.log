@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/code/CPU_single_cycle/src/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/code/CPU_single_cycle/src/RegFile_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
