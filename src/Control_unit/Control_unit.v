@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module Control_unit(
-    input Opcode,
+    input [5:0] Opcode,
     input zero,
     input sign,
     output reset,// 0 pc=0 1 pc接受新地址

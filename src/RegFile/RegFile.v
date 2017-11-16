@@ -22,26 +22,26 @@
 
 module RegFile(
     input CLK, 
-    input RegWre,// ¼Ä´æÆ÷Ð´Ê¹ÄÜ¶Ë
+    input RegWre,// ï¿½Ä´ï¿½ï¿½ï¿½Ð´Ê¹ï¿½Ü¶ï¿½
     input [4:0] ReadReg1,
     input [4:0] ReadReg2,
-    input [4:0] WriteReg, // Ð´¼Ä´æÆ÷ºÅ
-    input [31:0] WriteData, // Ð´¼Ä´æÆ÷µÄÊý¾Ý
+    input [4:0] WriteReg, // Ð´ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
+    input [31:0] WriteData, // Ð´ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     output [31:0] ReadData1,
     output [31:0] ReadData2,
-    input RST // ÇåÁã£¬ÖØÖÃ
+    input RST // ä½Žç”µå¹³æœ‰æ•ˆ 
 );
-    reg [31:0] regFile[1:31]; // ¼Ä´æÆ÷¶¨Òå±ØÐëÓÃ reg ÀàÐÍ
+    reg [31:0] regFile[1:31]; // 
     integer i;
-    assign   ReadData1 = (ReadReg1 == 0) ? 0 : regFile[ReadReg1]; // ¶Á¼Ä´æÆ÷Êý¾Ý // ¿ÉËæÊ±¶Á
+    assign   ReadData1 = (ReadReg1 == 0) ? 0 : regFile[ReadReg1]; // ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ // ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
     assign   ReadData2 = (ReadReg2 == 0) ? 0 : regFile[ReadReg2];
 
-    always @ (negedge CLK or negedge RST) begin   // ±ØÐëÓÃÊ±ÖÓ±ßÑØ´¥·¢ // Ê±ÖÓÏÂ½µÑØ
+    always @ (negedge CLK or negedge RST) begin   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ó±ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ // Ê±ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½
         if (RST==0) begin
             for(i=1;i<32;i=i+1) regFile[i] <= 0;
         end
-        else if(RegWre == 1 && WriteReg != 0) // WriteReg != 0£¬$0 ¼Ä´æÆ÷²»ÄÜÐÞ¸Ä
-            regFile[WriteReg] <= WriteData;  // Ð´¼Ä´æÆ÷
+        else if(RegWre == 1 && WriteReg != 0) // WriteReg != 0ï¿½ï¿½$0 ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½
+            regFile[WriteReg] <= WriteData;  // Ð´ï¿½Ä´ï¿½ï¿½ï¿½
     end
 endmodule
 
