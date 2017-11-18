@@ -6,45 +6,61 @@ module CPU_single_cycle(
     input Reset // 低电平有�?
 );
 
+    // control unit wire
+    wire PCWre;
+    wire ALUSrcA;
+    wire ALUSrcB;
+    wire DBDataSrc;
+    wire RegWre;
+//    wire InsMemRW;
+    wire nRD;
+    wire nWR;
+    wire RegDst;
+    wire ExtSel;
+    wire [1:0] PCSrc;
+    wire [2:0] ALUOp;
+
+
+
+
     wire [31:0] PCData;
     wire [31:0] Addr;
+    
 
 
     PC mypc(
         .CLK(CLK),
         .Reset(Reset),
-        .PCWre(PCwre), // TODO:
+        .PCWre(PCWre), // TODO:
         .PCData(PCData), // TODO: 
         .Addr(Addr)
     );
 
-    reg [31:0] Ins_data;
-
+    wire [5:0] Op_code;
+    wire [4:0] Rs_reg;
+    wire [4:0] Rt_reg;
+    wire [4:0] Rd_reg;
+    wire [4:0] Sa_number;
+    wire [15:0] Imm_number;
     Ins_Memory ins(
         .IAddr(Addr),
-        .IDataOut(Ins_Data)
+//        .IDataOut(Ins_Data)
+        .Op_code(Op_code),
+        .Rs_reg(Rs_reg),
+        .Rt_reg(Rt_reg),
+        .Rd_reg(Rd_reg),
+        .Sa_number(Sa_number),
+        .Imm_number(Imm_number)
     );
 
-    reg [5:0] Op_code;
-    reg [4:0] Rs_reg;
-    reg [4:0] Rt_reg;
-    reg [4:0] Rd_reg;
-    reg [4:0] Sa_number;
-    reg [15:0] Imm_number;
+
     
-    always@(*) begin
-        Op_code =  Ins_Data[31:26];// TODO:
-        Rs_reg = Ins_Data[25:21];
-        Rt_reg = Ins_Data[20:16];
-        Rd_reg = Ins_Data[15:11];
-        Sa_number = Ins_Data[10:6];
-        Imm_number = Ins_Data[15:0];
-    end
-    
+
+
 
     wire [4:0] Wre_reg;
 
-    mux2to1 mux2to1_1(
+    mux2to1_5 mux2to1_1(
         .sel(RegDst),// TODO:
         .DataIn1(Rt_reg),
         .DataIn2(Rd_reg),
@@ -63,7 +79,7 @@ module CPU_single_cycle(
         .WriteReg(Wre_reg),
         .WriteData(Wre_back_data), // TODO:
         .ReadData1(Re_Data_1),
-        .ReadData1(Re_Data_2),
+        .ReadData2(Re_Data_2),
         .RST(Reset)
     );
 
@@ -73,9 +89,9 @@ module CPU_single_cycle(
     // Imm_number
     // TODO:
     wire [31:0] Ext_Sa_number = {27'b000000000000000000000000000, Sa_number};
-
+    wire [31:0] Ext_Imm_number;
     Extend MY_Extend(
-        .Extsel(Extsel), // TODO:
+        .ExtSel(ExtSel), // TODO:
         .DataIn(Imm_number),
         .DataOut(Ext_Imm_number)
     );
@@ -84,14 +100,14 @@ module CPU_single_cycle(
     wire [31:0] ALU_b;
 
 
-    mux2to1 Select_ALU_srcA(
+    mux2to1_32 Select_ALU_srcA(
         .sel(ALUSrcA), // TODO:
         .DataIn1(Re_Data_1),
         .DataIn2(Ext_Sa_number),
         .DataOut(ALU_a)
     );
 
-    mux2to1 Select_ALU_srcB(
+    mux2to1_32 Select_ALU_srcB(
         .sel(ALUSrcB),  // TODO:
         .DataIn1(Re_Data_2),
         .DataIn2(Ext_Imm_number),
@@ -103,7 +119,7 @@ module CPU_single_cycle(
     wire zero;
 
     ALU32 My_ALU32(
-        .ALUopcode(ALUopcode), // TODO:
+        .ALUopcode(ALUOp),
         .rega(ALU_a),
         .regb(ALU_b),
         .result(ALU_result),
@@ -117,14 +133,14 @@ module CPU_single_cycle(
         .CLK(CLK),
         .DAddr(ALU_result),
         .DataIn(Re_Data_2),
-        .nRD(RD),// TODO:
-        .nWR(WR), // TODO:
+        .nRD(nRD),// TODO:
+        .nWR(nWR), // TODO:
         .Dataout(Re_Mem_Data)
     );
 
     
 
-    mux2to1 Select_Wre_back_data(
+    mux2to1_32 Select_Wre_back_data(
         .sel(DBDataSrc), // TODO:
         .DataIn1(ALU_result),
         .DataIn2(Re_Mem_Data),
@@ -145,6 +161,24 @@ module CPU_single_cycle(
         .DataIn2(PC4_move),
         .DataIn3(PC4_jump),
         .DataOut(PCData)
+    );
+    
+    
+    Control_unit my_control_unit(
+        .Opcode(Op_code),
+        .zero(zero),
+        .sign(sign),
+        .PCWre(PCWre),
+        .RegDst(RegDst),
+        .RegWre(RegWre),
+        .ALUOp(ALUOp),
+        .ALUSrcA(ALUSrcA),
+        .ALUSrcB(ALUSrcB),
+        .ExtSel(ExtSel),
+        .PCSrc(PCSrc),
+        .nRD(nRD),
+        .nWR(nWR),
+        .DBDataSrc(DBDataSrc)
     );
 
 endmodule
