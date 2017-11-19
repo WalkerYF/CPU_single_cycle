@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/DEBUG/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/DEBUG/debouncing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debouncing
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/DEBUG/displayReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module displayReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv_190hz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+WARNING: [VRFC 10-756] identifier display_data is used before its declaration [D:/code/CPU_single_cycle/src/top.v:14]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/src/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [VRFC 10-2458] undeclared symbol out_display_data, assumed default net type wire [D:/code/CPU_single_cycle/src/top_tb.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

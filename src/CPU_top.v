@@ -1,9 +1,17 @@
 `timescale 1ns / 1ps
 
-
+//  显示哪一些信号
+// alu_a, alu_b
+// alu_result
+// 
+// PC, addr, nextaddr,  
 module CPU_single_cycle(
     input CLK,
-    input Reset // 低电平有�?
+    input Reset, // 低电平有效
+    output [15:0] out_sign1,
+    output [15:0] out_sign2,
+    output [15:0] out_sign3,
+    output [15:0] out_sign4
 );
 
     // control unit wire
@@ -148,8 +156,8 @@ module CPU_single_cycle(
 
     // PC
     // PC+4
-    // PC+4+偏移�?
-    // PC+4与地�?拼接
+    // PC+4+偏移�?
+    // PC+4与地�?拼接
     wire [31:0] PC4 = Addr+4;
     wire [31:0] PC4_move = PC4+(Ext_Imm_number << 2);
     wire [31:0] PC4_jump = {PC4[31:28], Ext_Imm_number,2'b00};

@@ -3,7 +3,7 @@
 
 module clkdiv_190hz(
     input wire CLK,
-//    input wire clr,
+    input wire clr,
     output wire CLK_190hz
 );
 

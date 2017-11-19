@@ -1,9 +1,7 @@
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property IOSTANDARD LVCMOS33 [get_ports CLK]
-set_property PACKAGE_PIN T18 [get_ports clr]
+set_property PACKAGE_PIN W17 [get_ports clr]
 set_property IOSTANDARD LVCMOS33 [get_ports clr]
-set_property IOSTANDARD LVCMOS33 [get_ports button]
-set_property PACKAGE_PIN U18 [get_ports button]
 set_property IOSTANDARD LVCMOS33 [get_ports {num_ctrl[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {num_ctrl[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {num_ctrl[5]}]
@@ -28,5 +26,22 @@ set_property PACKAGE_PIN W4 [get_ports {pos_ctrl[3]}]
 set_property PACKAGE_PIN V4 [get_ports {pos_ctrl[2]}]
 set_property PACKAGE_PIN U4 [get_ports {pos_ctrl[1]}]
 set_property PACKAGE_PIN U2 [get_ports {pos_ctrl[0]}]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets button_IBUF]
 
+
+
+set_property PACKAGE_PIN V17 [get_ports {select_sign[0]}]
+set_property PACKAGE_PIN V16 [get_ports {select_sign[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {select_sign[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {select_sign[0]}]
+set_property PACKAGE_PIN T18 [get_ports button_in]
+set_property PACKAGE_PIN W16 [get_ports Reset]
+set_property IOSTANDARD LVCMOS33 [get_ports button_in]
+set_property IOSTANDARD LVCMOS33 [get_ports Reset]
+
+
+
+
+
+
+set_property PACKAGE_PIN V19 [get_ports test_button]
+set_property IOSTANDARD LVCMOS33 [get_ports test_button]

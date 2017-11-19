@@ -37,10 +37,10 @@ module display_top(
         .out_button(out_button)
     );
 
-    assign disp_data = display_data;
+    // assign disp_data = display_data;
 
-    always@(posedge out_button) begin 
-            display_data = display_data+1;
-    end
+    // always@(posedge out_button) begin 
+    //         display_data = display_data+1;
+    // end
 
 endmodule

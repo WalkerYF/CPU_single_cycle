@@ -2,22 +2,51 @@
 
 module top(
     input CLK,
-    input clr,
-    input Reset,
-    input button,
-    input [1:0] select_reg,
+    input clr,// 重置
+    input Reset,// 重置CPU的状态，将地址置为0.将按键消抖模块重置
+    input button_in, // 显示模块以及显示190分频清零
+    input [1:0] select_sign,
     output [3:0] pos_ctrl,
-    output [7:0] num_ctrl
+    output [7:0] num_ctrl,
+    output test_button
+    // output [15:0] out_display_data
 );
-
+    assign test_button = button_in;
+    assign out_display_data = display_data;
+    
     wire CLK_190hz;
     reg [15:0] display_data;
+    wire button_out;
 
-    CPU_top my_cpu(
-        .CLK(button),
-        .Reset(Reset)
-        // output some reg
+    debouncing my_debouncing(
+        .clk(CLK),
+        .rst(Reset),
+        .key(button_in),
+        .key_pulse(button_out)
     );
+
+    wire [15:0] out_sign1;
+    wire [15:0] out_sign2;
+    wire [15:0] out_sign3;
+    wire [15:0] out_sign4;
+    
+    test my_test( 
+        .CLK(button_out),
+        .Reset(Reset),
+        .out_sign1(out_sign1),
+        .out_sign2(out_sign2),
+        .out_sign3(out_sign3),
+        .out_sign4(out_sign4)       // output some reg
+    );
+
+    always@(*) begin
+        case(select_sign)
+            2'b00: display_data = out_sign1;
+            2'b01: display_data = out_sign2;
+            2'b10: display_data = out_sign3;
+            2'b11: display_data = out_sign4;
+        endcase
+    end
 
     clkdiv_190hz my_clkdiv_190hz(
         .CLK(CLK),
@@ -28,15 +57,8 @@ module top(
     displayReg my_displayReg(
         .CLK_190hz(CLK_190hz),
         .disp_data(display_data),
-        .nclr(clr),
+        .clr(clr),
         .pos_ctrl(pos_ctrl),
         .num_ctrl(num_ctrl)
     );
-
-
-
-    always@(*) begin
-        display_data = 16'habc7;
-    end
-
 endmodule
