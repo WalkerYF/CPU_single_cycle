@@ -1,0 +1,187 @@
+#-----------------------------------------------------------
+# Vivado v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
+# IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
+# Start of session at: Sat Nov 18 20:57:37 2017
+# Process ID: 19132
+# Current directory: E:/code/CPU_single_cycle/CPU_single_cycle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17552 E:\code\CPU_single_cycle\CPU_single_cycle\CPU_single_cycle.xpr
+# Log file: E:/code/CPU_single_cycle/CPU_single_cycle/vivado.log
+# Journal file: E:/code/CPU_single_cycle/CPU_single_cycle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.xpr
+update_files -from_files E:/code/CPU_single_cycle/src/CPU_top.v -to_files E:/code/CPU_single_cycle/src/top.v -filesets [get_filesets *]
+import_files E:/code/CPU_single_cycle/src/DEBUG
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/debug.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top display_tb [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top display_top [current_fileset]
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/display_tb.v
+update_compile_order -fileset sources_1
+import_files -norecurse E:/code/CPU_single_cycle/src/DEBUG/display_top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+place_ports CLK W5
+set_property IOSTANDARD LVCMOS33 [get_ports [list CLK]]
+place_ports nclr T18
+set_property IOSTANDARD {} [get_ports [list nclr]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list nclr]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list button]]
+place_ports button U18
+set_property IOSTANDARD LVCMOS33 [get_ports [list {num_ctrl[7]} {num_ctrl[6]} {num_ctrl[5]} {num_ctrl[4]} {num_ctrl[3]} {num_ctrl[2]} {num_ctrl[1]} {num_ctrl[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pos_ctrl[3]} {pos_ctrl[2]} {pos_ctrl[1]} {pos_ctrl[0]}]]
+place_ports {num_ctrl[7]} V7
+place_ports {num_ctrl[6]} U7
+place_ports {num_ctrl[5]} V5
+place_ports {num_ctrl[4]} U5
+place_ports {num_ctrl[3]} V8
+place_ports {num_ctrl[2]} U8
+place_ports {num_ctrl[1]} W6
+place_ports {num_ctrl[0]} W7
+file mkdir E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new
+close [ open E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc w ]
+add_files -fileset constrs_1 E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc
+set_property target_constrs_file E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc [current_fileset -constrset]
+save_constraints -force
+place_ports {pos_ctrl[3]} W4
+place_ports {pos_ctrl[2]} V4
+place_ports {pos_ctrl[1]} U4
+place_ports {pos_ctrl[0]} U2
+set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/impl_1/display_top.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/impl_1/display_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+current_design impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+add_files -norecurse E:/code/CPU_single_cycle/src/DEBUG/display_top.v
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/display_top.v
+file delete -force E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/display_top.v
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/clkdiv_190hz.v
+file delete -force E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/clkdiv_190hz.v
+add_files -norecurse E:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/displayReg.v
+file delete -force E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/displayReg.v
+add_files -norecurse E:/code/CPU_single_cycle/src/DEBUG/displayReg.v
+update_compile_order -fileset sources_1
+update_files -from_files E:/code/CPU_single_cycle/src/mux2to1_5.v -to_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/src/mux2to1_5.v -filesets [get_filesets *]
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/src/mux2to1_5.v
+file delete -force E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/src/mux2to1_5.v
+add_files -norecurse E:/code/CPU_single_cycle/src/mux2to1_5.v
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/src/mux2to1_32.v
+file delete -force E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/src/mux2to1_32.v
+add_files -norecurse E:/code/CPU_single_cycle/src/mux2to1_32.v
+update_compile_order -fileset sources_1
+remove_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/debouncing.v
+file delete -force E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/sources_1/imports/DEBUG/debouncing.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/impl_1/display_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+add_files -norecurse E:/code/CPU_single_cycle/src/DEBUG/debouncing.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1

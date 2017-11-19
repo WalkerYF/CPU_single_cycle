@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 
-module mux2to1_5(
+module mux2to1_32(
     input sel,
-    input [4:0] DataIn1,
-    input [4:0] DataIn2,
-    output reg [4:0] DataOut
+    input [31:0] DataIn1,
+    input [31:0] DataIn2,
+    output reg [31:0] DataOut
 );
     always@(*) begin
     case(sel)
