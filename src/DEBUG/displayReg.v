@@ -23,7 +23,7 @@
 module displayReg(
         input wire CLK_190hz,
         input wire [15:0]disp_data,
-        input wire clr,
+        input wire clr,//clr为1，cur_data始终为1111,显示FFFF
         output wire [3:0]pos_ctrl,
         output wire [7:0]num_ctrl
     );

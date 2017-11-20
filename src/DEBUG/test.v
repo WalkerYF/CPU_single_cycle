@@ -15,7 +15,7 @@ module test(
     reg [15:0] sign3 = 1<<8;
     reg [15:0] sign4 = 1<<12;
 
-    always@(posedge CLK) begin 
+    always@(posedge CLK or negedge Reset) begin 
         if (Reset == 0) begin
             sign1 = 1;
             sign2 = 1<<4;

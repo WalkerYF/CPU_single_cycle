@@ -2,7 +2,7 @@
 
 module top(
     input CLK,
-    input clr,// 重置
+    input clr,// 重置显示模块
     input Reset,// 重置CPU的状态，将地址置为0.将按键消抖模块重置
     input button_in, // 显示模块以及显示190分频清零
     input [1:0] select_sign,
@@ -12,7 +12,7 @@ module top(
     // output [15:0] out_display_data
 );
     assign test_button = button_in;
-    assign out_display_data = display_data;
+    // assign out_display_data = display_data;
     
     wire CLK_190hz;
     reg [15:0] display_data;
@@ -21,7 +21,7 @@ module top(
     debouncing my_debouncing(
         .clk(CLK),
         .rst(Reset),
-        .key(button_in),
+        .key(button_in),// 应该是按键触发低电平
         .key_pulse(button_out)
     );
 
@@ -48,7 +48,7 @@ module top(
         endcase
     end
 
-    clkdiv_190hz my_clkdiv_190hz(
+    clkdiv_190hz my_clkdiv_190hz(//时钟不会因为clr置为1而置零
         .CLK(CLK),
         .clr(clr),
         .CLK_190hz(CLK_190hz)
