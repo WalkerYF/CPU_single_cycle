@@ -24,9 +24,9 @@ module test(
         end
         else begin
             sign1 = sign1 + 1;
-            sign2 = sign2 + 1<<4;
-            sign3 = sign3 + 1<<8;
-            sign4 = sign4 + 1<<12;
+            sign2 = sign2 + (1<<4);
+            sign3 = sign3 + (1<<8);
+            sign4 = sign4 + (1<<12);
         end
 
     end

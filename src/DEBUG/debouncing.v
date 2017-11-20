@@ -36,7 +36,8 @@ module debouncing (
     input             rst;                        //低电平有效
     input 	[N-1:0]   key_n;                        //输入的按键			
 	output  [N-1:0]   key_pulse;                  //按键动作产生的脉冲
-    wire key = ~key_n;
+    wire key;
+    assign key = ~key_n;
         reg     [N-1:0]   key_rst_pre;                //定义一个寄存器型变量存储上一个触发时的按键值
         reg     [N-1:0]   key_rst;                    //定义一个寄存器变量储存储当前时刻触发的按键值
  
@@ -57,7 +58,7 @@ module debouncing (
  
         assign  key_edge = key_rst_pre & (~key_rst);//脉冲边沿检测。当key检测到下降沿时，key_edge产生一个时钟周期的高电平
  
-        reg	[17:0]	  cnt;                       //产生延时所用的计数器，系统时钟100MHz，要延时20ms左右时间，至少需要21位计数器     
+        reg	[21:0]	  cnt;                       //产生延时所用的计数器，系统时钟100MHz，要延时20ms左右时间，至少需要21位计数器     
  
         //产生20ms延时，当检测到key_edge有效是计数器清零开始计数
         always @(posedge clk or negedge rst)

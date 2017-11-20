@@ -2,12 +2,12 @@
 # Vivado v2015.3 (64-bit)
 # SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
 # IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
-# Start of session at: Sun Nov 19 22:48:41 2017
-# Process ID: 9396
-# Current directory: D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1
+# Start of session at: Tue Nov 21 00:51:40 2017
+# Process ID: 138252
+# Current directory: E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1
 # Command line: vivado.exe -log top.vds -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1/top.vds
-# Journal file: D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1\vivado.jou
+# Log file: E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1/top.vds
+# Journal file: E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a35tcpg236-1
@@ -15,22 +15,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 283.391 ; gain = 111.203
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 287.594 ; gain = 115.523
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [D:/code/CPU_single_cycle/src/top.v:3]
-INFO: [Synth 8-638] synthesizing module 'debouncing' [D:/code/CPU_single_cycle/src/DEBUG/debouncing.v:25]
+INFO: [Synth 8-638] synthesizing module 'top' [E:/code/CPU_single_cycle/src/top.v:3]
+INFO: [Synth 8-638] synthesizing module 'debouncing' [E:/code/CPU_single_cycle/src/DEBUG/debouncing.v:25]
 	Parameter N bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debouncing' (1#1) [D:/code/CPU_single_cycle/src/DEBUG/debouncing.v:25]
-INFO: [Synth 8-638] synthesizing module 'test' [D:/code/CPU_single_cycle/src/DEBUG/test.v:4]
-INFO: [Synth 8-256] done synthesizing module 'test' (2#1) [D:/code/CPU_single_cycle/src/DEBUG/test.v:4]
-INFO: [Synth 8-638] synthesizing module 'clkdiv_190hz' [D:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v:4]
-INFO: [Synth 8-256] done synthesizing module 'clkdiv_190hz' (3#1) [D:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v:4]
-INFO: [Synth 8-638] synthesizing module 'displayReg' [D:/code/CPU_single_cycle/src/DEBUG/displayReg.v:23]
-INFO: [Synth 8-226] default block is never used [D:/code/CPU_single_cycle/src/DEBUG/displayReg.v:50]
-INFO: [Synth 8-256] done synthesizing module 'displayReg' (4#1) [D:/code/CPU_single_cycle/src/DEBUG/displayReg.v:23]
-INFO: [Synth 8-256] done synthesizing module 'top' (5#1) [D:/code/CPU_single_cycle/src/top.v:3]
+INFO: [Synth 8-256] done synthesizing module 'debouncing' (1#1) [E:/code/CPU_single_cycle/src/DEBUG/debouncing.v:25]
+INFO: [Synth 8-638] synthesizing module 'test' [E:/code/CPU_single_cycle/src/DEBUG/test.v:4]
+INFO: [Synth 8-256] done synthesizing module 'test' (2#1) [E:/code/CPU_single_cycle/src/DEBUG/test.v:4]
+INFO: [Synth 8-638] synthesizing module 'clkdiv_190hz' [E:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v:4]
+INFO: [Synth 8-256] done synthesizing module 'clkdiv_190hz' (3#1) [E:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v:4]
+INFO: [Synth 8-638] synthesizing module 'displayReg' [E:/code/CPU_single_cycle/src/DEBUG/displayReg.v:23]
+INFO: [Synth 8-226] default block is never used [E:/code/CPU_single_cycle/src/DEBUG/displayReg.v:50]
+INFO: [Synth 8-256] done synthesizing module 'displayReg' (4#1) [E:/code/CPU_single_cycle/src/DEBUG/displayReg.v:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (5#1) [E:/code/CPU_single_cycle/src/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 319.688 ; gain = 147.500
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 323.793 ; gain = 151.723
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -40,41 +40,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 319.688 ; gain = 147.500
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 323.793 ; gain = 151.723
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]
-Finished Parsing XDC File [D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]
+Finished Parsing XDC File [E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 598.520 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 602.359 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -86,10 +86,7 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 3     
 +---Registers : 
-	               16 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 4     
 +---Muxes : 
@@ -112,12 +109,6 @@ Module debouncing
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 4     
-Module test 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 3     
-+---Registers : 
-	               16 Bit    Registers := 3     
 Module displayReg 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -138,15 +129,15 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 598.520 ; gain = 426.332
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3917] design top has port num_ctrl[7] driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 602.359 ; gain = 430.289
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -156,100 +147,59 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[9] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[5] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[5] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[1] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[1] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[1] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[11] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[7] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[7] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[3] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[3] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[3] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[10] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[6] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[6] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[2] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[2] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[2] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[8] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[4] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[4] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[0] ' (FDR) to '\my_test/sign2_reg[0] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[0] ' (FDR) to '\my_test/sign3_reg[0] '
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_test/sign3_reg[0] )
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[5] ' (FDR) to '\my_test/sign2_reg[9] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[6] ' (FDR) to '\my_test/sign2_reg[9] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[7] ' (FDR) to '\my_test/sign2_reg[9] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[9] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[0] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[9] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[10] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[11] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[12] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[13] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[14] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign3_reg[15] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[13] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[14] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign4_reg[15] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[11] ' (FDR) to '\my_test/sign2_reg[10] '
-INFO: [Synth 8-3886] merging instance '\my_test/sign2_reg[14] ' (FDR) to '\my_test/sign2_reg[13] '
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_test/sign2_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\my_test/sign2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\my_test/sign2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\my_test/sign2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\my_test/sign4_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\my_test/sign2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\my_test/sign3_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (\my_clkdiv_190hz/q_reg[19] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[12] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[8] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[15] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[14] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[13] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[9] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[7] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[6] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[5] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[0] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[9] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[5] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[5] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[1] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[1] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[1] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[11] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[7] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[7] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[3] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[3] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[3] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[10] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[6] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[6] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[2] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[2] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[2] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[8] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[4] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[4] ) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[8] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[9] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[10] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[11] ) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[0] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[10] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[9] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[10] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[11] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[12] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[13] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[14] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[15] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[13] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[14] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign4_reg[15] ) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[11] ) is unused and will be removed from module top.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\my_test/sign2_reg[4] )
-WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign3_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\my_test/sign2_reg[3] ) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 602.359 ; gain = 430.289
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -263,24 +213,24 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
-Finished Parallel Timing Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 602.359 ; gain = 430.289
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -304,7 +254,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -317,7 +267,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,25 +279,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -363,41 +313,39 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    14|
-|3     |LUT1   |    36|
+|1     |BUFG   |     2|
+|2     |CARRY4 |    21|
+|3     |LUT1   |    61|
 |4     |LUT2   |     1|
-|5     |LUT3   |    19|
-|6     |LUT4   |     9|
-|7     |LUT5   |    12|
-|8     |LUT6   |    11|
-|9     |MUXF7  |     4|
-|10    |FDCE   |    18|
-|11    |FDPE   |     4|
-|12    |FDRE   |    40|
-|13    |FDSE   |     1|
-|14    |IBUF   |     6|
-|15    |OBUF   |    13|
+|5     |LUT3   |    23|
+|6     |LUT4   |    16|
+|7     |LUT5   |     7|
+|8     |LUT6   |    15|
+|9     |FDCE   |    58|
+|10    |FDPE   |     8|
+|11    |FDRE   |    23|
+|12    |IBUF   |     6|
+|13    |OBUF   |    14|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------------+-------------+------+
 |      |Instance          |Module       |Cells |
 +------+------------------+-------------+------+
-|1     |top               |             |   189|
+|1     |top               |             |   255|
 |2     |  my_clkdiv_190hz |clkdiv_190hz |    43|
-|3     |  my_debouncing   |debouncing   |    53|
-|4     |  my_displayReg   |displayReg   |    32|
-|5     |  my_test         |test         |    41|
+|3     |  my_debouncing   |debouncing   |    64|
+|4     |  my_displayReg   |displayReg   |    23|
+|5     |  my_test         |test         |   103|
 +------+------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 598.520 ; gain = 113.211
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 598.520 ; gain = 426.332
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 602.359 ; gain = 112.871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 602.359 ; gain = 430.289
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -405,8 +353,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-66 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+47 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 598.520 ; gain = 393.512
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 598.520 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 19 22:49:44 2017...
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 602.359 ; gain = 397.227
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 602.359 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 21 00:52:07 2017...

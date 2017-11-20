@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date         : Sun Nov 19 22:51:01 2017
-| Host         :  running 64-bit Service Pack 1  (build 7601)
+| Date         : Tue Nov 21 00:52:35 2017
+| Host         : wyf running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7a35t
@@ -23,7 +23,7 @@ Table of Contents
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
 | Number of unique control sets                                     |     4 |
-| Minimum Number of register sites lost to control set restrictions |    17 |
+| Minimum Number of register sites lost to control set restrictions |    15 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -34,8 +34,8 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              23 |            6 |
-| No           | No                    | Yes                    |              22 |            8 |
-| No           | Yes                   | No                     |              18 |            4 |
+| No           | No                    | Yes                    |              66 |           19 |
+| No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -45,13 +45,13 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------+---------------+---------------------+------------------+----------------+
-|         Clock Signal         | Enable Signal |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
-+------------------------------+---------------+---------------------+------------------+----------------+
-|  my_clkdiv_190hz/CLK         |               |                     |                1 |              4 |
-|  my_debouncing/sign1_reg[15] |               | my_debouncing/clear |                4 |             18 |
-|  CLK_IBUF_BUFG               |               |                     |                5 |             19 |
-|  CLK_IBUF_BUFG               |               | my_debouncing/clear |                8 |             22 |
-+------------------------------+---------------+---------------------+------------------+----------------+
++----------------------------+---------------+------------------------+------------------+----------------+
+|        Clock Signal        | Enable Signal |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++----------------------------+---------------+------------------------+------------------+----------------+
+|  my_clkdiv_190hz/CLK       |               |                        |                1 |              4 |
+|  CLK_IBUF_BUFG             |               |                        |                5 |             19 |
+|  CLK_IBUF_BUFG             |               | my_test/sign1_reg[0]_0 |                9 |             26 |
+|  test_button_out_OBUF_BUFG |               | my_test/sign1_reg[0]_0 |               10 |             40 |
++----------------------------+---------------+------------------------+------------------+----------------+
 
 

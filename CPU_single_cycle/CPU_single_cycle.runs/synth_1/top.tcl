@@ -10,21 +10,21 @@ create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.cache/wt [current_project]
-set_property parent.project_path D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.xpr [current_project]
+set_property webtalk.parent_dir E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.cache/wt [current_project]
+set_property parent.project_path E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
-read_mem D:/code/CPU_single_cycle/src/Ins_Memory/code.mem
+read_mem E:/code/CPU_single_cycle/src/Ins_Memory/code.mem
 read_verilog -library xil_defaultlib {
-  D:/code/CPU_single_cycle/src/DEBUG/debouncing.v
-  D:/code/CPU_single_cycle/src/DEBUG/test.v
-  D:/code/CPU_single_cycle/src/DEBUG/displayReg.v
-  D:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v
-  D:/code/CPU_single_cycle/src/top.v
+  E:/code/CPU_single_cycle/src/DEBUG/debouncing.v
+  E:/code/CPU_single_cycle/src/DEBUG/displayReg.v
+  E:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v
+  E:/code/CPU_single_cycle/src/DEBUG/test.v
+  E:/code/CPU_single_cycle/src/top.v
 }
-read_xdc D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc
-set_property used_in_implementation false [get_files D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]
+read_xdc E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc
+set_property used_in_implementation false [get_files E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc]
 
 synth_design -top top -part xc7a35tcpg236-1
 write_checkpoint -noxdef top.dcp

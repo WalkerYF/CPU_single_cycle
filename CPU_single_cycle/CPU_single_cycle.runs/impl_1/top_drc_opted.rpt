@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date         : Sun Nov 19 22:50:59 2017
-| Host         :  running 64-bit Service Pack 1  (build 7601)
+| Date         : Tue Nov 21 00:52:33 2017
+| Host         : wyf running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc
 ------------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 1
 
 2. REPORT DETAILS
 -----------------
@@ -35,17 +35,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT my_debouncing/sign2[12]_i_1 is driving clock pin of 18 cells. This could lead to large hold time violations. First few involved cells are:
-    my_test/sign2_reg[8] {FDRE}
-    my_test/sign2_reg[12] {FDRE}
-    my_test/sign1_reg[9] {FDRE}
-    my_test/sign1_reg[8] {FDRE}
-    my_test/sign1_reg[7] {FDRE}
-
 Related violations: <none>
 
 

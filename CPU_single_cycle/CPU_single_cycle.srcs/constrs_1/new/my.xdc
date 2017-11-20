@@ -43,5 +43,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports Reset]
 
 
 
-set_property PACKAGE_PIN V19 [get_ports test_button]
-set_property IOSTANDARD LVCMOS33 [get_ports test_button]
+
+
+set_property PACKAGE_PIN V13 [get_ports test_button_in]
+set_property PACKAGE_PIN V14 [get_ports test_button_out]
+set_property IOSTANDARD LVCMOS33 [get_ports test_button_in]
+set_property IOSTANDARD LVCMOS33 [get_ports test_button_out]
