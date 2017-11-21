@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module CPU_single_cycle(
-    input CLK,
+    input CLK, // 负脉冲
     input Reset, // 低电平有效
     output [15:0] out_sign1,// 当前指令地址PC，下条指令地址PC
     output [15:0] out_sign2,// RS寄存器地址：RS寄存器数据
@@ -154,6 +154,7 @@ module CPU_single_cycle(
 
     mux4to1 My_mux4to1(
         .sel(PCSrc), 
+        .Reset(Reset),
         .DataIn1(PC4),
         .DataIn2(PC4_move),
         .DataIn3(PC4_jump),
@@ -178,9 +179,12 @@ module CPU_single_cycle(
         .DBDataSrc(DBDataSrc)
     );
 
-    assign out_sign1 = {addr[7:0], PCData[7:0]};
+
     assign out_sign2 = {3'b000,Rs_reg,Re_Data_1[7:0]};
     assign out_sign3 = {3'b000,Rt_reg,Re_Data_2[7:0]};
     assign out_sign4 = {ALU_result[7:0], Wre_back_data[7:0]};
+    assign out_sign1 = {Addr[7:0], PCData[7:0]};
+
+    
 
 endmodule

@@ -17,10 +17,20 @@ set_property target_language Verilog [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 read_mem E:/code/CPU_single_cycle/src/Ins_Memory/code.mem
 read_verilog -library xil_defaultlib {
+  E:/code/CPU_single_cycle/src/mux4to1.v
+  E:/code/CPU_single_cycle/src/RegFile/RegFile.v
+  E:/code/CPU_single_cycle/src/PC.v
+  E:/code/CPU_single_cycle/src/mux2to1_5.v
+  E:/code/CPU_single_cycle/src/mux2to1_32.v
+  E:/code/CPU_single_cycle/src/Ins_Memory/Ins_Memory.v
+  E:/code/CPU_single_cycle/src/Extend.v
+  E:/code/CPU_single_cycle/src/Data_Memory/Data_Memory.v
+  E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v
+  E:/code/CPU_single_cycle/src/ALU/ALU32.v
   E:/code/CPU_single_cycle/src/DEBUG/debouncing.v
+  E:/code/CPU_single_cycle/src/CPU_top.v
   E:/code/CPU_single_cycle/src/DEBUG/displayReg.v
   E:/code/CPU_single_cycle/src/DEBUG/clkdiv_190hz.v
-  E:/code/CPU_single_cycle/src/DEBUG/test.v
   E:/code/CPU_single_cycle/src/top.v
 }
 read_xdc E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc

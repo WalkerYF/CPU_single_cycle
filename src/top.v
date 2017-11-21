@@ -9,9 +9,13 @@ module top(
     output [3:0] pos_ctrl,
     output [7:0] num_ctrl,
     output test_button_in,
-    output test_button_out
+    output reg test_button_out
     //  output [15:0] out_display_data
 );
+    initial begin
+        test_button_out = 0;
+    end
+
     assign test_button_in = button_in;// DEBUG
 
     // assign out_display_data = display_data;
@@ -27,7 +31,10 @@ module top(
         .key_pulse(button_out)
     );
 
-    assign test_button_out = button_out; // DEBUG
+    always@(posedge button_out) begin
+        test_button_out = ~test_button_out;
+    end
+
 
     wire [15:0] out_sign1;
     wire [15:0] out_sign2;
@@ -43,7 +50,7 @@ module top(
     //     .out_sign4(out_sign4)       // output some reg
     // );
 // 没有对时钟下降沿消抖？也不需要消抖。
-    CPU_signle_cycle my_CPU( 
+    CPU_single_cycle my_CPU( 
         .CLK(button_out),
         .Reset(Reset),
         .out_sign1(out_sign1),

@@ -11,8 +11,8 @@ module top_tb();
         .clr(clr),
         .Reset(Reset),
         .button_in(button_in),
-        .select_sign(select_sign),
-        .out_display_data(out_display_data)
+        .select_sign(select_sign)
+//        .out_display_data(out_display_data)
     );
 
 

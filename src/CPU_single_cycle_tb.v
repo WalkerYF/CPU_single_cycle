@@ -28,7 +28,11 @@ module CPU_single_cycle_tb();
         .Reset(Reset)
     );
     initial begin
-        CLK = 0;
+        CLK = 1;
+        Reset = 0;
+        #10
+        Reset = 1;
+        #1000
         Reset = 0;
         #20
         Reset = 1;
