@@ -42,7 +42,7 @@ module top(
     //     .out_sign3(out_sign3),
     //     .out_sign4(out_sign4)       // output some reg
     // );
-
+// 没有对时钟下降沿消抖？也不需要消抖。
     CPU_signle_cycle my_CPU( 
         .CLK(button_out),
         .Reset(Reset),

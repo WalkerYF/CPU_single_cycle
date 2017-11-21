@@ -8,10 +8,10 @@
 module CPU_single_cycle(
     input CLK,
     input Reset, // 低电平有效
-    output [15:0] out_sign1,
-    output [15:0] out_sign2,
-    output [15:0] out_sign3,
-    output [15:0] out_sign4
+    output [15:0] out_sign1,// 当前指令地址PC，下条指令地址PC
+    output [15:0] out_sign2,// RS寄存器地址：RS寄存器数据
+    output [15:0] out_sign3,// RT寄存器地址：RT寄存器数据
+    output [15:0] out_sign4 // ALU结果输出：DB总线数据
 );
 
     // control unit wire
@@ -90,15 +90,11 @@ module CPU_single_cycle(
         .RST(Reset)
     );
 
-    // Re_Data_1
-    // Re_Data_2
-    // Sa_number
-    // Imm_number
-    // TODO:
+
     wire [31:0] Ext_Sa_number = {27'b000000000000000000000000000, Sa_number};
     wire [31:0] Ext_Imm_number;
     Extend MY_Extend(
-        .ExtSel(ExtSel), // TODO:
+        .ExtSel(ExtSel), 
         .DataIn(Imm_number),
         .DataOut(Ext_Imm_number)
     );
@@ -108,14 +104,14 @@ module CPU_single_cycle(
 
 
     mux2to1_32 Select_ALU_srcA(
-        .sel(ALUSrcA), // TODO:
+        .sel(ALUSrcA), 
         .DataIn1(Re_Data_1),
         .DataIn2(Ext_Sa_number),
         .DataOut(ALU_a)
     );
 
     mux2to1_32 Select_ALU_srcB(
-        .sel(ALUSrcB),  // TODO:
+        .sel(ALUSrcB),  
         .DataIn1(Re_Data_2),
         .DataIn2(Ext_Imm_number),
         .DataOut(ALU_b)
@@ -130,8 +126,8 @@ module CPU_single_cycle(
         .rega(ALU_a),
         .regb(ALU_b),
         .result(ALU_result),
-        .sign(sign),// TODO:
-        .zero(zero) // TODO:
+        .sign(sign),
+        .zero(zero) 
     );
 
     wire [31:0] Re_Mem_Data;
@@ -140,15 +136,15 @@ module CPU_single_cycle(
         .CLK(CLK),
         .DAddr(ALU_result),
         .DataIn(Re_Data_2),
-        .nRD(nRD),// TODO:
-        .nWR(nWR), // TODO:
+        .nRD(nRD),
+        .nWR(nWR), 
         .Dataout(Re_Mem_Data)
     );
 
     
 
     mux2to1_32 Select_Wre_back_data(
-        .sel(DBDataSrc), // TODO:
+        .sel(DBDataSrc), 
         .DataIn1(ALU_result),
         .DataIn2(Re_Mem_Data),
         .DataOut(Wre_back_data)
@@ -156,14 +152,14 @@ module CPU_single_cycle(
 
     // PC
     // PC+4
-    // PC+4+偏移�?
-    // PC+4与地�?拼接
+    // PC+4+偏移
+    // PC+4与地址前四位拼接
     wire [31:0] PC4 = Addr+4;
     wire [31:0] PC4_move = PC4+(Ext_Imm_number << 2);
     wire [31:0] PC4_jump = {PC4[31:28], Ext_Imm_number,2'b00};
 
     mux4to1 My_mux4to1(
-        .sel(PCSrc), // TODO:
+        .sel(PCSrc), 
         .DataIn1(PC4),
         .DataIn2(PC4_move),
         .DataIn3(PC4_jump),
@@ -187,5 +183,10 @@ module CPU_single_cycle(
         .nWR(nWR),
         .DBDataSrc(DBDataSrc)
     );
+
+    assign out_sign1 = {addr[7:0], PCData[7:0]};
+    assign out_sign2 = {3'b000,Rs_reg,Re_Data_1[7:0]};
+    assign out_sign3 = {3'b000,Rt_reg,Re_Data_2[7:0]};
+    assign out_sign4 = {ALU_result[7:0], Wre_back_data[7:0]};
 
 endmodule
