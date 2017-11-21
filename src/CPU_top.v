@@ -1,10 +1,5 @@
 `timescale 1ns / 1ps
 
-//  显示哪一些信号
-// alu_a, alu_b
-// alu_result
-// 
-// PC, addr, nextaddr,  
 module CPU_single_cycle(
     input CLK,
     input Reset, // 低电平有效
@@ -20,7 +15,6 @@ module CPU_single_cycle(
     wire ALUSrcB;
     wire DBDataSrc;
     wire RegWre;
-//    wire InsMemRW;
     wire nRD;
     wire nWR;
     wire RegDst;

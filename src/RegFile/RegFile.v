@@ -36,7 +36,7 @@ module RegFile(
     assign   ReadData1 = (ReadReg1 == 0) ? 0 : regFile[ReadReg1]; // 如果寄存器号是0，就输出0，否则输出对应寄存器号的的值
     assign   ReadData2 = (ReadReg2 == 0) ? 0 : regFile[ReadReg2]; // 同上
 
-    always @ (negedge CLK or negedge RST) begin   // 时钟下降沿触发写寄存器
+    always @ (posedge CLK or negedge RST) begin   // 时钟下降沿触发写寄存器
         if (RST==0) begin
             for(i=1;i<32;i=i+1) regFile[i] <= 0; // 如果RST低电平，就把寄存器清零
         end
