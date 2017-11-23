@@ -4,19 +4,19 @@ module Control_unit(
     input [5:0] Opcode,
     input zero,
     input sign,
-    output reg Reset,// µÍµçÆ½ÓÐÐ§£¬µÍµçÆ½ÖØÖÃ
+    output reg Reset,// ï¿½Íµï¿½Æ½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½Íµï¿½Æ½ï¿½ï¿½ï¿½ï¿½
     output reg ALUSrcA,
     output reg ALUSrcB,
     output reg DBDataSrc,
     output reg PCWre,
     output reg RegWre,
     output reg InsMemRW,
-    output reg nRD, // µÍµçÆ½ÓÐÐ§£¬Êý¾Ý´æ´¢Æ÷¶ÁÐÅºÅ
-    output reg nWR, // µÍµçÆ½ÓÐÐ§£¬Êý¾Ý´æ´¢Æ÷Ð´ÐÅºÅ
-    output reg RegDst,// Ñ¡ÔñÐ´¼Ä´æÆ÷µÄµØÖ·
+    output reg nRD, // ï¿½Íµï¿½Æ½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½Ý´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½
+    output reg nWR, // ï¿½Íµï¿½Æ½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½Ý´æ´¢ï¿½ï¿½Ð´ï¿½Åºï¿½
+    output reg RegDst,// Ñ¡ï¿½ï¿½Ð´ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Äµï¿½Ö·
     output reg ExtSel,// 
-    output reg [1:0] PCSrc, // Ñ¡ÔñÊ¹ÓÃÄÄÒ»¸ö¼ÆËãºóµÄPCµØÖ·
-    output reg [2:0] ALUOp // ALU²Ù×÷Âë£¬Ñ¡ÔñALUµÄ¹¦ÄÜ
+    output reg [1:0] PCSrc, // Ñ¡ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PCï¿½ï¿½Ö·
+    output reg [2:0] ALUOp // ALUï¿½ï¿½ï¿½ï¿½ï¿½ë£¬Ñ¡ï¿½ï¿½ALUï¿½Ä¹ï¿½ï¿½ï¿½
 );
     always@(*)
     begin
@@ -209,6 +209,7 @@ module Control_unit(
             end   
             6'b111111: begin
                 PCWre <= 0;
+                PCSrc <= 0;
             end
             default: PCWre <= 0;
         endcase

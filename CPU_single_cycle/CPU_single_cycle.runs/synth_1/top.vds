@@ -2,8 +2,8 @@
 # Vivado v2015.3 (64-bit)
 # SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
 # IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
-# Start of session at: Wed Nov 22 01:43:54 2017
-# Process ID: 270200
+# Start of session at: Thu Nov 23 02:08:36 2017
+# Process ID: 28492
 # Current directory: E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1
 # Command line: vivado.exe -log top.vds -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.runs/synth_1/top.vds
@@ -17,7 +17,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v:182]
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v:195]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 296.816 ; gain = 124.414
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 297.043 ; gain = 125.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [E:/code/CPU_single_cycle/src/top.v:3]
 INFO: [Synth 8-638] synthesizing module 'debouncing' [E:/code/CPU_single_cycle/src/DEBUG/debouncing.v:25]
@@ -31,8 +31,8 @@ INFO: [Synth 8-3876] $readmem data file 'E:/code/CPU_single_cycle/src/Ins_Memory
 INFO: [Synth 8-256] done synthesizing module 'Ins_Memory' (3#1) [E:/code/CPU_single_cycle/src/Ins_Memory/Ins_Memory.v:3]
 INFO: [Synth 8-638] synthesizing module 'mux2to1_5' [E:/code/CPU_single_cycle/src/mux2to1_5.v:3]
 INFO: [Synth 8-256] done synthesizing module 'mux2to1_5' (4#1) [E:/code/CPU_single_cycle/src/mux2to1_5.v:3]
-INFO: [Synth 8-638] synthesizing module 'RegFile' [E:/code/CPU_single_cycle/src/RegFile/RegFile.v:23]
-INFO: [Synth 8-256] done synthesizing module 'RegFile' (5#1) [E:/code/CPU_single_cycle/src/RegFile/RegFile.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegFile' [E:/code/CPU_single_cycle/src/RegFile/RegFile.v:2]
+INFO: [Synth 8-256] done synthesizing module 'RegFile' (5#1) [E:/code/CPU_single_cycle/src/RegFile/RegFile.v:2]
 INFO: [Synth 8-638] synthesizing module 'Extend' [E:/code/CPU_single_cycle/src/Extend.v:4]
 INFO: [Synth 8-256] done synthesizing module 'Extend' (6#1) [E:/code/CPU_single_cycle/src/Extend.v:4]
 INFO: [Synth 8-638] synthesizing module 'mux2to1_32' [E:/code/CPU_single_cycle/src/mux2to1_32.v:3]
@@ -40,13 +40,13 @@ INFO: [Synth 8-256] done synthesizing module 'mux2to1_32' (7#1) [E:/code/CPU_sin
 INFO: [Synth 8-638] synthesizing module 'ALU32' [E:/code/CPU_single_cycle/src/ALU/ALU32.v:22]
 INFO: [Synth 8-226] default block is never used [E:/code/CPU_single_cycle/src/ALU/ALU32.v:33]
 INFO: [Synth 8-256] done synthesizing module 'ALU32' (8#1) [E:/code/CPU_single_cycle/src/ALU/ALU32.v:22]
-INFO: [Synth 8-638] synthesizing module 'Data_Memory' [E:/code/CPU_single_cycle/src/Data_Memory/Data_Memory.v:10]
+INFO: [Synth 8-638] synthesizing module 'Data_Memory' [E:/code/CPU_single_cycle/src/Data_Memory/Data_Memory.v:2]
 WARNING: [Synth 8-4767] Trying to implement RAM 'ram_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
 RAM "ram_reg" dissolved into registers
-INFO: [Synth 8-256] done synthesizing module 'Data_Memory' (9#1) [E:/code/CPU_single_cycle/src/Data_Memory/Data_Memory.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Data_Memory' (9#1) [E:/code/CPU_single_cycle/src/Data_Memory/Data_Memory.v:2]
 INFO: [Synth 8-638] synthesizing module 'mux4to1' [E:/code/CPU_single_cycle/src/mux4to1.v:5]
 INFO: [Synth 8-256] done synthesizing module 'mux4to1' (10#1) [E:/code/CPU_single_cycle/src/mux4to1.v:5]
 WARNING: [Synth 8-350] instance 'My_mux4to1' of module 'mux4to1' requires 7 connections, but only 6 given [E:/code/CPU_single_cycle/src/CPU_top.v:155]
@@ -63,7 +63,7 @@ INFO: [Synth 8-226] default block is never used [E:/code/CPU_single_cycle/src/DE
 INFO: [Synth 8-256] done synthesizing module 'displayReg' (14#1) [E:/code/CPU_single_cycle/src/DEBUG/displayReg.v:23]
 INFO: [Synth 8-256] done synthesizing module 'top' (15#1) [E:/code/CPU_single_cycle/src/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 338.621 ; gain = 166.219
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 339.078 ; gain = 167.402
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -105,7 +105,7 @@ WARNING: [Synth 8-3295] tying undriven pin My_mux4to1:DataIn4[2] to constant 0 [
 WARNING: [Synth 8-3295] tying undriven pin My_mux4to1:DataIn4[1] to constant 0 [E:/code/CPU_single_cycle/src/CPU_top.v:155]
 WARNING: [Synth 8-3295] tying undriven pin My_mux4to1:DataIn4[0] to constant 0 [E:/code/CPU_single_cycle/src/CPU_top.v:155]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 338.621 ; gain = 166.219
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 339.078 ; gain = 167.402
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -121,22 +121,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 625.879 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 626.871 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 625.879 ; gain = 453.477
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 626.871 ; gain = 455.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 625.879 ; gain = 453.477
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 626.871 ; gain = 455.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 625.879 ; gain = 453.477
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 626.871 ; gain = 455.195
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "regFile_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "regFile_reg[2]" won't be mapped to RAM because it is too sparse
@@ -172,6 +172,7 @@ INFO: [Synth 8-5546] ROM "regFile_reg[31]" won't be mapped to RAM because it is 
 INFO: [Synth 8-5546] ROM "PCWre" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "RegDst" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "DBDataSrc" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "PCSrc" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "ExtSel" is below threshold of ROM address width. It will be mapped to LUTs
 WARNING: [Synth 8-327] inferring latch for variable 'ALUSrcA_reg' [E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v:28]
 WARNING: [Synth 8-327] inferring latch for variable 'ALUSrcB_reg' [E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v:29]
@@ -184,7 +185,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'ExtSel_reg' [E:/code/CPU_si
 WARNING: [Synth 8-327] inferring latch for variable 'PCSrc_reg' [E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v:32]
 WARNING: [Synth 8-327] inferring latch for variable 'ALUOp_reg' [E:/code/CPU_single_cycle/src/Control_unit/Control_unit.v:30]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 625.879 ; gain = 453.477
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 626.871 ; gain = 455.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -219,7 +220,7 @@ Detailed RTL Component Info :
 	  16 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 32    
 	   5 Input      1 Bit        Muxes := 121   
-	  16 Input      1 Bit        Muxes := 11    
+	  16 Input      1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -287,7 +288,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	  16 Input      3 Bit        Muxes := 1     
 	  16 Input      2 Bit        Muxes := 1     
-	  16 Input      1 Bit        Muxes := 11    
+	  16 Input      1 Bit        Muxes := 12    
 Module CPU_single_cycle 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -312,15 +313,15 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 625.879 ; gain = 453.477
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 626.871 ; gain = 455.195
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3917] design top has port num_ctrl[7] driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 625.879 ; gain = 453.477
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 626.871 ; gain = 455.195
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 625.879 ; gain = 453.477
+Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 626.871 ; gain = 455.195
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -405,9 +406,9 @@ WARNING: [Synth 8-3332] Sequential element (\my_CPU/mypc/Addr_reg_rep[7] ) is un
 WARNING: [Synth 8-3332] Sequential element (\my_CPU/mypc/Addr_reg_rep[0] ) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (\my_clkdiv_190hz/q_reg[19] ) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 733.598 ; gain = 561.922
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -421,24 +422,24 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:19 ; elapsed = 00:01:28 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:37 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:42 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
-Finished Parallel Timing Optimization  : Time (s): cpu = 00:01:32 ; elapsed = 00:01:37 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:01:33 ; elapsed = 00:01:42 . Memory (MB): peak = 733.598 ; gain = 561.922
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:32 ; elapsed = 00:01:37 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:33 ; elapsed = 00:01:42 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:01:44 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Technology Mapping : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -462,7 +463,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:01:45 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished IO Insertion : Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -475,7 +476,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:01:45 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -487,25 +488,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:42 ; elapsed = 00:01:46 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:42 ; elapsed = 00:01:46 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -526,9 +527,9 @@ Report Cell Usage:
 |3     |LUT1   |    56|
 |4     |LUT2   |    95|
 |5     |LUT3   |  1267|
-|6     |LUT4   |   193|
-|7     |LUT5   |  1370|
-|8     |LUT6   |  2268|
+|6     |LUT4   |   191|
+|7     |LUT5   |  1371|
+|8     |LUT6   |  2270|
 |9     |MUXF7  |   414|
 |10    |MUXF8  |    71|
 |11    |FDCE   |  1027|
@@ -543,23 +544,23 @@ Report Instance Areas:
 +------+--------------------+-----------------+------+
 |      |Instance            |Module           |Cells |
 +------+--------------------+-----------------+------+
-|1     |top                 |                 |  7828|
-|2     |  my_CPU            |CPU_single_cycle |  7680|
+|1     |top                 |                 |  7829|
+|2     |  my_CPU            |CPU_single_cycle |  7681|
 |3     |    MY_Data_Memory  |Data_Memory      |  2696|
 |4     |    My_ALU32        |ALU32            |    48|
 |5     |    my_control_unit |Control_unit     |  1815|
-|6     |    mypc            |PC               |   430|
+|6     |    mypc            |PC               |   431|
 |7     |    myregfile       |RegFile          |  2682|
 |8     |  my_clkdiv_190hz   |clkdiv_190hz     |    43|
 |9     |  my_debouncing     |debouncing       |    62|
 |10    |  my_displayReg     |displayReg       |    19|
 +------+--------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:42 ; elapsed = 00:01:46 . Memory (MB): peak = 732.426 ; gain = 560.023
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 733.598 ; gain = 561.922
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 732.426 ; gain = 236.441
-Synthesis Optimization Complete : Time (s): cpu = 00:01:42 ; elapsed = 00:01:47 . Memory (MB): peak = 732.426 ; gain = 560.023
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:32 ; elapsed = 00:01:41 . Memory (MB): peak = 733.598 ; gain = 234.035
+Synthesis Optimization Complete : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 733.598 ; gain = 561.922
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -570,8 +571,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 14 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-81 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+82 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:46 . Memory (MB): peak = 732.426 ; gain = 526.828
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 732.426 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 22 01:45:45 2017...
+synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 733.598 ; gain = 528.859
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 733.598 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 23 02:10:33 2017...

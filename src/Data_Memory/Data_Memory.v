@@ -1,19 +1,11 @@
 `timescale 1ns / 1ps
-//   Daddr，数据存储器地址输入端口
-//   DataIn，数据存储器数据输入端口
-//   DataOut，数据存储器数据输出端口
-//   RD，数据存储器读控制信号，�?0�?
-//   WR，数据存储器写控制信号，�?0�?
-
-
-
 module Data_Memory(
     input CLK,
     input [31:0] DAddr,
     input [31:0] DataIn,// [31:24], [23:16], [15:8], [7:0]
     output [31:0] Dataout,
-    input nRD, // 低电平有效，读控制信�?  
-    input nWR // 西电平有效，写控制信�?
+    input nRD, // 低电平有效，读控制信号
+    input nWR // 西电平有效，写控制信号
 );
     reg [7:0] ram [0:120]; 
 
