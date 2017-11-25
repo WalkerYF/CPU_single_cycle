@@ -11,11 +11,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="434990000fs"></ZoomStartTime>
-      <ZoomEndTime time="476990001fs"></ZoomEndTime>
-      <Cursor1Time time="394090000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="167000001fs"></ZoomEndTime>
+      <Cursor1Time time="44600000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="33" />
+   <WVObjectSize size="42" />
    <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/Reset" type="logic">
       <obj_property name="ElementShortName">Reset</obj_property>
       <obj_property name="ObjectShortName">Reset</obj_property>
@@ -143,10 +143,45 @@
    <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/myregfile/regFile" type="array">
       <obj_property name="ElementShortName">regFile[1:31][31:0]</obj_property>
       <obj_property name="ObjectShortName">regFile[1:31][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/MY_Data_Memory/ram" type="array">
       <obj_property name="ElementShortName">ram[0:120][7:0]</obj_property>
       <obj_property name="ObjectShortName">ram[0:120][7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/IAddr" type="array">
+      <obj_property name="ElementShortName">IAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Op_code" type="array">
+      <obj_property name="ElementShortName">Op_code[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Op_code[5:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Rs_reg" type="array">
+      <obj_property name="ElementShortName">Rs_reg[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rs_reg[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Rt_reg" type="array">
+      <obj_property name="ElementShortName">Rt_reg[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rt_reg[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Rd_reg" type="array">
+      <obj_property name="ElementShortName">Rd_reg[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rd_reg[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Sa_number" type="array">
+      <obj_property name="ElementShortName">Sa_number[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Sa_number[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Imm_number" type="array">
+      <obj_property name="ElementShortName">Imm_number[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Imm_number[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/ram" type="array">
+      <obj_property name="ElementShortName">ram[0:240][7:0]</obj_property>
+      <obj_property name="ObjectShortName">ram[0:240][7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/CPU_single_cycle_tb/My_CPU/ins/Ins_Data" type="array">
+      <obj_property name="ElementShortName">Ins_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Ins_Data[31:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:E:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc rfile:../../../CPU_single_cycle.srcs/constrs_1/new/my.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/code/CPU_single_cycle/CPU_single_cycle/CPU_single_cycle.srcs/constrs_1/new/my.xdc rfile:../../../CPU_single_cycle.srcs/constrs_1/new/my.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

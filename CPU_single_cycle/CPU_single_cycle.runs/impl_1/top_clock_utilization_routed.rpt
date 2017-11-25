@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
-| Date              : Thu Nov 23 02:11:47 2017
-| Host              : wyf running 64-bit Service Pack 1  (build 7601)
+| Date              : Thu Nov 23 12:08:00 2017
+| Host              : wyf2 running 64-bit Service Pack 1  (build 7601)
 | Command           : report_clock_utilization -file top_clock_utilization_routed.rpt
 | Design            : top
 | Device            : 7a35t-cpg236
